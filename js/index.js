@@ -110,8 +110,6 @@ $(function() {
     $("#channel-tabs").bind('tabsshow', function(event, ui) {
         var hrefid = $(ui.tab).attr("href");
 
-        /* Resizes channel tabs, if window height changed */
-        $("#channel-tabs").height($(window).height()-$("#channel-tabs").offset().top-10);
         /* Resizes chat area in funciton of the height of the channel tab */
         /* Scrolls down the chat of the current tab */
         $(hrefid+" #chatTextArea").get(0).scrollTop = $(hrefid+" #chatTextArea").get(0).scrollHeight;
@@ -129,7 +127,7 @@ $(function() {
         websocket.send("teamChange|" + JSON.stringify({"color": colorPickerColor, "name": $("#trainer-name").val() || players.myname()}));
     }
     });
-    $("#channel-tabs").height($(window).height()-$("#channel-tabs").offset().top-10);
+	
     $(document).on("click", "a", function (event) {
         var href = this.href;
 
@@ -692,6 +690,8 @@ parseCommand = function(message) {
     } else if (cmd === "login") {
         var params = JSON.parse(data);
         players.login(params.id, params.info);
+
+        websocket.send("getrankings|" + params.id);
     } else if (cmd === "unregistered") {
         $("#register").attr("disabled", false);
     } else if (cmd === "pm") {
@@ -739,5 +739,9 @@ parseCommand = function(message) {
         var battleid = data.split("|")[0];
         var result = JSON.parse(data.slice(battleid.length+1));
         battles.battleEnded(battleid, result);
+    } else if (cmd === "rankings") {
+        var id = data.split("|")[0];
+        var result = JSON.parse(data.slice(id.length+1));
+        console.log(JSON.stringify(result));
     }
 };

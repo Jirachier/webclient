@@ -85,7 +85,7 @@ def main(argv):
         },
         'items': {
             'files': ['released_items', 'released_berries'],
-            'base_files': ['items', 'berries', 'item_useful']
+            'base_files': ['items', 'berries', 'item_useful', 'item_messages', 'berry_messages']
         },
         'types': {
             'base_files': ["types", "category"]
@@ -106,7 +106,7 @@ def main(argv):
             'base_files': ['versions', 'gens']
         }
     }
-    gens = ['1','2','3','4','5']
+    gens = ['1','2','3','4','5', '6']
 
     for type in types.keys():
         for gen in gens:

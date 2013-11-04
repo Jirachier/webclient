@@ -315,7 +315,7 @@ var updatePlayerInfo = function(player) {
             var path = window.location.pathname;
             var dir = path.substr(0, path.lastIndexOf("/"));
             info = "<div class='iframe-trainer-info'>"+info+"</div>"
-            $("#player-dialog .trainer-info").html("<iframe src='" + remotepage + "?content=" + window.btoa(format(info))+"&css="
+            $("#player-dialog .trainer-info").html("<iframe frameBorder='0' width='100%' src='" + remotepage + "?content=" + window.btoa(format(info))+"&css="
                 + window.btoa(window.location.protocol + "//" + window.location.hostname + dir + "/css/webclient.css") + "'></iframe>");
         } else {
             $("#player-dialog .trainer-info").text(info);
@@ -744,4 +744,8 @@ parseCommand = function(message) {
         var result = JSON.parse(data.slice(id.length+1));
         console.log(JSON.stringify(result));
     }
+	else if (cmd == "tiers") {
+		var params = JSON.parse(data);
+		tiersList = params;
+	}
 };

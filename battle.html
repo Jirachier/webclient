@@ -2,21 +2,15 @@
     <tr>
 	<td class="battle_window">
 		<div class="battle_window_content">
-			<div class="battle_window_top_right_username">
-				cojot
+			<div class="p2_name battler_username">
+				<span class="p2_name_content">cojot</span>
+				<span class="battler_bg" style="width:30%;"></span>
 			</div>
-			<div class="battle_window_bottom_left_username">
-				Jirachier
+			<div class="p1_name battler_username">
+				<span class="p1_name_content">Jirachier</span>
+				<span class="battler_bg" style="width:57%;"></span>
 			</div>
-			<div class="battle_window_top_left_pokeballs">
-				<img src="images/pokeballicon.png" alt="" />
-				<img src="images/pokeballicon.png" alt="" />
-				<img src="images/pokeballicon.png" alt="" />
-				<img src="images/pokeballicon.png" alt="" />
-				<img src="images/pokeballicon.png" alt="" />
-				<img src="images/pokeballicon.png" alt="" />
-			</div>
-			<div class="battle_window_bottom_right_pokeballs">
+			<div class="p2_pokeballs">
 				<img src="images/pokeballicon.png" alt="" />
 				<img src="images/pokeballicon.png" alt="" />
 				<img src="images/pokeballicon.png" alt="" />
@@ -24,43 +18,49 @@
 				<img src="images/pokeballicon.png" alt="" />
 				<img src="images/pokeballicon.png" alt="" />
 			</div>
-			<div style="top:60px;right:75px;" class="battle_window_top_pokemon">
-				<div class="battle_window_pokemon_infos">
-					<span class="battle_window_top_pokemon_name">
-						Camerupt
+			<div class="p1_pokeballs">
+				<img src="images/pokeballicon.png" alt="" />
+				<img src="images/pokeballicon.png" alt="" />
+				<img src="images/pokeballicon.png" alt="" />
+				<img src="images/pokeballicon.png" alt="" />
+				<img src="images/pokeballicon.png" alt="" />
+				<img src="images/pokeballicon.png" alt="" />
+			</div>
+			<div class="p2_pokemon1">
+				<div style="top:20px;right:90px;" class="battle_window_pokemon_infos">
+					<span class="pokemon_name">
 					</span>
 					<div class="battle-stat-content">
 						<span class="battle-stat-name">
 							HP
 						</span>
 						<span class="battle-stat-block">
-						<span style="width:30%;" class="battle-stat-progress battle-stat-progress-2x"></span>
+						<span style="width:30%;" class="battle-stat-progress"></span>
 						<span class="battle-stat-value">
-							30%
 						</span>
 						</span>
 					</div>
+					<span class="battle-pokemon-status">BRN</span>
 				</div>
-				<img src="http://pokemon-online.eu/images/pokemon/black-white/323.png" alt="" />
+				<img style="top:60px;right:75px;" src="" alt="" class="sprite" />
 			</div>
-			<div style="bottom:30px;left:70px;" class="battle_window_bottom_pokemon">
-				<div class="battle_window_pokemon_infos">
-					<span class="battle_window_top_pokemon_name">
-						Jirachi
+			<div class="p1_pokemon1">
+				<div style="bottom:100px;left:50px;" class="battle_window_pokemon_infos">
+					<span class="pokemon_name">
 					</span>
 					<div class="battle-stat-content">
 						<span class="battle-stat-name">
 							HP
 						</span>
 						<span class="battle-stat-block">
-						<span style="width:80%;" class="battle-stat-progress battle-stat-progress-4x"></span>
+						<span style="width:80%;" class="battle-stat-progress"></span>
 						<span class="battle-stat-value">
-							80%
 						</span>
 						</span>
 					</div>
+					<span class="battle-pokemon-status">BRN</span>
 				</div>
-				<img src="http://pokemon-online.eu/images/pokemon/black-white/back/385.png" alt="" />
+				<img style="bottom:30px;left:70px;" src="" alt="" class="sprite"/>
 			</div>
 			<img class="battle_window_background" src="http://play.pokemonshowdown.com/fx/bg-meadow.png" alt="" />
 		</div>
@@ -68,16 +68,117 @@
 	<td class="battle_chat">
 		<div class="battle_chat_content">
 			<div class="scrollable">
-					<strong>Battle between plouf and plouf2 just started!</strong><br /><br />
-					<strong>Tier:</strong> Wifi OU<br />
-					<strong>Mode:</strong> Singles<br />
-					<h2>Turn 1</h2>
-					hurr durr<br /><br /><br /><br />durrrrr<br /><br /><br /><br />plouf<br /><br />plouf<br /><br />plouf
 			</div>
 			<div class="messagebox">
-				<input type="text" name="send_battle_message[]" value="" placeholder="Send Message" />
+				<input type="text" history="true" class="send_battle_message" value="" placeholder="Send Message" />
 			</div>
 		</div>
 	</td>
     </tr>
+	<tr class="battle_options">
+		<td class="battle_options_moves">
+			<span class="click_button type_17">
+				Move 1
+				<span class="battle_move_pp">1/15 PP</span>
+			</span>
+			<span class="click_button type_0">
+				Move 2
+				<span class="battle_move_pp">1/15 PP</span>
+			</span>
+			<br style="clear:left;" />
+			<span class="click_button type_5">
+				Move 2
+				<span class="battle_move_pp">1/15 PP</span>
+			</span>
+			<span class="click_button type_13">
+				Move 4
+				<span class="battle_move_pp">1/15 PP</span>
+			</span>
+			<br style="clear:left;" />
+		</td>
+		<td>
+			<div class="battle_options_pokemon">
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+				<span class="battle_pokemon">
+					<span class="battle_pokemon_content">
+						<img src="http://pokemon-online.eu/images/poke_icons/382.png" alt="" />
+						<span class="battle_pokemon_content_text">
+							Kyogre
+							<br />
+							352/404
+						</span>
+					</span>
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr class="battle_buttons">
+		<td colspan="2">
+			<span class="battle_button">
+					Cancel
+				</span>
+				<span class="battle_button">
+					Attack
+				</span>
+				<span class="battle_button">
+					Switch
+				</span>
+				<span class="battle_button">
+					Suggest Draw
+				</span>
+				<span class="battle_button">
+					Forfeit
+				</span>
+				<br style="clear:left;" />
+		</td>
+	</tr>
 </table>
